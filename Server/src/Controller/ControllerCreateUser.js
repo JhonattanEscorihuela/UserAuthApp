@@ -1,8 +1,8 @@
-let mongoose = require('mongoose');
+const mongoose = require('mongoose');
 require('../Schema/User');
 const bcrypt = require('bcrypt');
 
-let User = mongoose.model('User');
+const User = mongoose.model('User');
 
 
 const createUserController = async (username, password) => {
