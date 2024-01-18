@@ -4,7 +4,7 @@ const handlerCreateUser = require('../Handler/HandlerCreateUser');
 
 
 
-userRoute.post('/create', handlerCreateUser);
+userRoute.post('/register', handlerCreateUser);
 
 
 module.exports = userRoute;

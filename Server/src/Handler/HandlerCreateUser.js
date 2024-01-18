@@ -9,8 +9,8 @@ const createUserHandler = async (req, res) => {
         if (!username, !password) {
             throw new Error(" ❌ Faltan Datos para crear es usuario");
         }
-        const response = await createUserController(username, password);
-        res.status(201).send(response);
+        await createUserController(username, password);
+        res.status(201).send('Usuario registrado exitosamente 🧑‍💻');
     } catch (error) {
         res.status(400).json({ error: error.message })
         process.exit(1);
