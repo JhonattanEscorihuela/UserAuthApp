@@ -4,9 +4,6 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const server = express();
 
-// const plantsRoute = require("./routes/plantsRoute.js");
-// let categoryPlants = require('./routes/categoryPlants.js')
-
 const userRoute = require('./Routes/RouteUser')
 
 server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
@@ -23,12 +20,6 @@ server.use((req, res, next) => {
 
 // User
 server.use('/user', userRoute);
-
-// // Plantas
-// server.use("/plants", plantsRoute);
-
-// // Categorias
-// server.use('/categories', categoryPlants);
 
 
 module.exports = server;

@@ -19,9 +19,6 @@ const createUserController = async (username, password) => {
     });
 
     await user.save();
-
-
-
 }
 
 module.exports = createUserController;
