@@ -15,8 +15,7 @@ const LoginUserHandler = async (req, res) => {
         res.json({ response });
 
     } catch (error) {
-        console.error(error.message);
-        res.status(500).send('Error al autenticar el usuario.');
+        res.status(400).json({ error: error.message });
     }
 }
 

@@ -7,7 +7,7 @@ const handlerLoginUser = require('../Handler/HandlerLoginUser');
 //Register User --> OK
 userRoute.post('/register', handlerCreateUser);
 
-//Login --> Pdt
+//Login --> OK
 userRoute.post('/login', handlerLoginUser);
 
 
