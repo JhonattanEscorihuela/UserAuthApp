@@ -4,7 +4,6 @@ const bcrypt = require('bcrypt');
 
 const User = mongoose.model('User');
 
-
 const createUserController = async (username, password) => {
 
     const userExist = await User.findOne({ username });

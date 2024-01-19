@@ -21,5 +21,4 @@ server.use((req, res, next) => {
 // User
 server.use('/user', userRoute);
 
-
 module.exports = server;

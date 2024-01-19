@@ -13,7 +13,6 @@ const User = mongoose.model('User');
 
 const LoginUserController = async (username, password) => {
 
-
     const userExist = await User.findOne({ username });
 
     if (!userExist || !(await bcrypt.compare(password, userExist.password))) {
