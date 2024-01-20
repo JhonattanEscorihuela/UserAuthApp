@@ -38,7 +38,7 @@ export function loginUser(userData) {
                 },
             });
 
-            
+
             Cookies.set('authToken', response.data.token, { expires: 1, httpOnly: true, secure: true }); // Cookie expira en 1 día
 
             dispatch({

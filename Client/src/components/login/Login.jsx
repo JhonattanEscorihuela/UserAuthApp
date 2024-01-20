@@ -39,7 +39,7 @@ const Login = () => {
                 </div>
                 <div>
                     <label htmlFor="password">Clave de usuario</label>
-                    <input type="text" id='password' name='password' value={formData.password} onChange={handleChange} />
+                    <input type="password" id='password' name='password' value={formData.password} onChange={handleChange} />
                 </div>
                 <button type="submit">Iniciar sesión</button>
             </form>
