@@ -19,12 +19,10 @@ const Register = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Verificar que las contraseñas coincidan antes de enviar la solicitud
         dispatch(registerUser(formData));
         setFormData({
             username: '',
             password: ''
-
         })
     }
 
@@ -39,7 +37,6 @@ const Register = () => {
                     <label htmlFor="password">Contraseña</label>
                     <input type="password" id='password' name='password' value={formData.password} onChange={handleChange} />
                 </div>
-
                 <button type="submit">Registrar</button>
             </form>
         </div>
