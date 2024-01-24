@@ -59,7 +59,7 @@ const Register = () => {
                         <label className="label" htmlFor="password">Pass Word</label>
                     </div>
 
-                    <button type="submit">Registrar</button>
+                    <button type="submit">Sign up</button>
                 </form>
             </div>
             {message && (
@@ -67,14 +67,20 @@ const Register = () => {
                     <div className="modal-content">
                         <p>{message}</p>
                         {message.toLowerCase().includes("exitosamente") && (
-                            <Link to={'/login'}>login</Link>
+                            <Link to={'/'}>login</Link>
                         )}
                         {!message.toLowerCase().includes("exitosamente") && (
-                            <button onClick={() => setMessage('')}>Cerrar</button>
+                            <button onClick={() => setMessage('')}>Close</button>
                         )}
                     </div>
                 </div>
             )}
+            <div className='register-container' >
+                <Link to={'/'}>
+                    Have an account?
+                </Link>
+            </div>
+
         </div>
 
     );

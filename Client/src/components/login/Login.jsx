@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { loginUser } from '../../redux/actions/authActions';
 
 
@@ -33,15 +34,22 @@ const Login = () => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="username">Nombre de usuario</label>
-                    <input type="text" id='username' name='username' value={formData.username} onChange={handleChange} />
+                <div className="input-group">
+                    <input className="input" required autoComplete="off" type="text" name="username" id="username" value={formData.username} onChange={handleChange} />
+                    <label className="label" htmlFor="username">User Name</label>
                 </div>
-                <div>
-                    <label htmlFor="password">Clave de usuario</label>
-                    <input type="password" id='password' name='password' value={formData.password} onChange={handleChange} />
+
+                <div className="input-group">
+                    <input className="input" required autoComplete="off" type="password" name="password" id="password" value={formData.password} onChange={handleChange} />
+                    <label className="label" htmlFor="password">Pass Word</label>
                 </div>
-                <button type="submit">Iniciar sesión</button>
+                <button type="submit">Login</button>
+                <div className='register-container' >
+                    <Link to={'/register'}>
+                        Don't have an account?
+                    </Link>
+                </div>
+
             </form>
         </div>
     );
