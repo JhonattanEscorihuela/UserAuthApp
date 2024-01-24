@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { registerUser } from '../../redux/actions/authActions';
+import './Register.styles.css'
 
 const Register = () => {
     const dispatch = useDispatch();
     const [formData, setFormData] = useState({
+        email: '',
+        fullname: '',
         username: '',
         password: ''
     });
@@ -21,6 +24,8 @@ const Register = () => {
         e.preventDefault();
         dispatch(registerUser(formData));
         setFormData({
+            email: '',
+            fullname: '',
             username: '',
             password: ''
         })
@@ -29,15 +34,26 @@ const Register = () => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="username">Nombre de usuario</label>
-                    <input type="text" id='username' name='username' value={formData.username} onChange={handleChange} />
+
+                <div className="input-group">
+                    <input className="input" required autoComplete="off" type="text" name="email" id="email" value={formData.email} onChange={handleChange} />
+                    <label className="label" htmlFor="email">Email</label>
                 </div>
-                <div>
-                    <label htmlFor="password">Contraseña</label>
-                    <input type="password" id='password' name='password' value={formData.password} onChange={handleChange} />
+                <div className="input-group">
+                    <input className="input" required autoComplete="off" type="text" name="fullname" id="fullname" value={formData.fullname} onChange={handleChange} />
+                    <label className="label" htmlFor="fullname">Full Name</label>
                 </div>
-                <button type="submit">Registrar</button>
+                <div className="input-group">
+                    <input className="input" required autoComplete="off" type="text" name="username" id="username" value={formData.username} onChange={handleChange} />
+                    <label className="label" htmlFor="username">User Name</label>
+                </div>
+                <div className="input-group">
+                    <input className="input" required autoComplete="off" type="password" name="password" id="password" value={formData.password} onChange={handleChange} />
+                    <label className="label" htmlFor="password">Pass Word</label>
+                </div>
+
+                <button type="submit"  >Registrar</button>
+
             </form>
         </div>
     );

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './LoginSingup.css';
+// import './LoginSingup.css';
 
 const LoginSignup = () => {
     const [isLoginForm, setIsLoginForm] = useState(true);
