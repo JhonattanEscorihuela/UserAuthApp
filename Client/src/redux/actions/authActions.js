@@ -7,24 +7,19 @@ export const REGISTER_USER = 'REGISTER_USER';
 export const REGISTER_USER_FAILURE = 'REGISTER_USER_FAILURE';
 export const LOGIN_USER_FAILURE = 'LOGIN_USER_FAILURE';
 
-
 export function registerUser(userData) {
     return async function (dispatch) {
-        try {
-            const response = await api.post('/user/register', userData);
 
-            dispatch({
-                type: REGISTER_USER,
-                payload: response.data,
-            });
-        } catch (error) {
-            console.error('Error de registro:', error);
+        const response = await api.post('/user/register', userData);
 
-            dispatch({
-                type: REGISTER_USER_FAILURE,
-                payload: error.message,
-            });
-        }
+        dispatch({
+            type: REGISTER_USER,
+            payload: response.data,
+        });
+
+
+        return response;
+
     }
 }
 
