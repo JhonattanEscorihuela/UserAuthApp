@@ -25,30 +25,25 @@ export function registerUser(userData) {
 
 export function loginUser(userData) {
     return async function (dispatch) {
-        try {
-            const response = await api.post('/user/login', userData, {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${userData.token}` // Ajusta esto según la estructura de tu usuario o token
-                },
-            });
+
+        const response = await api.post('/user/login', userData, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${userData.token}` // Ajusta esto según la estructura de tu usuario o token
+            },
+        });
 
 
-            Cookies.set('authToken', response.data.token, { expires: 1, httpOnly: true, secure: true }); // Cookie expira en 1 día
+        Cookies.set('authToken', response.data.token, { expires: 1, httpOnly: true, secure: true }); // Cookie expira en 1 día
 
-            dispatch({
-                type: LOGIN_USER,
-                payload: response.data.token,
-            })
+        dispatch({
+            type: LOGIN_USER,
+            payload: response.data.token,
+        })
 
-        } catch (error) {
-            console.error('Error al ingresar', error);
+        return response;
 
-            dispatch({
-                type: LOGIN_USER_FAILURE,
-                payload: error.message,
-            });
-        }
+
     }
 
 }

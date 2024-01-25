@@ -1,0 +1,21 @@
+/* styles.css o tu archivo de estilos */
+.welcome-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #000;
+    /* Fondo negro */
+    border: 1px solid #333;
+    /* Borde gris oscuro */
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    /* Sutil sombra blanca */
+}
+
+.welcome-container h2,
+.welcome-container p {
+    color: #fff;
+    /* Texto blanco */
+}
