@@ -12,7 +12,7 @@ server.use(bodyParser.json({ limit: '50mb' }));
 server.use(cookieParser());
 server.use(morgan('dev'));
 server.use(cors({
-    origin: 'https://65b3023e8693b45788a95ee9--musical-fox-b02f00.netlify.app',
+    origin: 'https://userauthappescorihuela.netlify.app',
     optionsSuccessStatus: 200,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
