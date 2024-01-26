@@ -12,7 +12,7 @@ server.use(bodyParser.json({ limit: '50mb' }));
 server.use(cookieParser());
 server.use(morgan('dev'));
 server.use(cors({
-    origin: 'http://localhost:5173/'
+    origin: 'http://localhost:5173'
 }));
 
 // User
