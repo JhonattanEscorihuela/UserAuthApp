@@ -11,7 +11,9 @@ server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 server.use(bodyParser.json({ limit: '50mb' }));
 server.use(cookieParser());
 server.use(morgan('dev'));
-server.use(cors());
+server.use(cors({
+    origin: 'http://localhost:5173/'
+}));
 
 // User
 server.use('/user', userRoute);
