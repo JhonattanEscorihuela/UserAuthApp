@@ -16,6 +16,7 @@ export function registerUser(userData) {
             type: REGISTER_USER,
             payload: response.data,
         });
+        console.log("hola", response);
 
 
         return response;

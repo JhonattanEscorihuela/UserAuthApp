@@ -71,6 +71,10 @@ body {
     border-radius: 5px;
 }
 
-.register-container{
+.modal-content p {
+    color: #1a1a1a;
+}
+
+.register-container {
     margin-top: 10px;
 }
