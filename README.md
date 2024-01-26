@@ -6,7 +6,7 @@ Una aplicación web de autenticación de usuarios construida con React.js, Redux
 
 - **Framework Frontend:** React.js
 - **Gestión de Estado:** Redux (con React)
-- **Estilo y Diseño:** Material-UI
+- **Estilo y Diseño:** CSS
 - **Herramientas de Autenticación:** jsonwebtoken
 - **Comunicación con la API:** Axios
 - **Seguridad:** A implementar (ver sección de seguridad)
